@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<h1>学员信息登记表</h1>
+	<form action="http://localhost:8080/FirstServlet/sample"  method="post">
+		<label>姓名:</label><input type="text" name="name">
+		<br>
+		<label>电话:</label><input type="text" name="mobile">
+		<br>
+		<label>性别</label>
+		<select name="gender">
+			<option value="male">男</option>
+			<option value="female">女</option>
+		</select>
+		<br>
+		<label>爱好:</label>
+		<input type="checkbox" name="hobby" value="music">听音乐
+		<input type="checkbox" name="hobby" value="swimming">游泳
+		<input type="checkbox" name="hobby" value="reading">阅读
+		<br>
+		<input type="submit" name="submitbutton" value="提交">
+	</form>
+</body>
+</html>
+
+

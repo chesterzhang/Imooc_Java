@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>job-servlets</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+        <servlet-name>create</servlet-name>
+        <servlet-class>com.imooc.servlet.CreateServlet</servlet-class>
+        <!-- 设置启动tomcat时加载,优先级0-9999,0最高 -->
+        <load-on-startup>0</load-on-startup>
+  </servlet>
+  
+  <servlet>
+        <servlet-name>import</servlet-name>
+        <servlet-class>com.imooc.servlet.ImportServlet</servlet-class>
+        <!-- 设置启动tomcat时加载,优先级0-9999,0最高 -->
+        <load-on-startup>100</load-on-startup>
+  </servlet>
+  
+   
+  
+</web-app>

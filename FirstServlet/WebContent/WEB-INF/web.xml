@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>FirstServlet</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <!-- 声明一个servlet -->
+  <servlet>
+        <!-- 给servlet取一个别名,可以自己取 -->
+        <servlet-name>first</servlet-name>
+        <!-- 将这个servlet与 实现service方法的类关联起来 -->
+        <servlet-class>com.imooc.servlet.FirstServlet</servlet-class>
+  </servlet>
+  
+  <!-- 将servlet和URL关联起来 -->
+  <servlet-mapping>
+        <servlet-name>first</servlet-name>
+        <url-pattern>/hi</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 再声明一个servlet -->
+  <servlet>
+        <!-- 给servlet取一个别名,可以自己取 -->
+        <servlet-name>sample</servlet-name>
+        <!-- 将这个servlet与 实现service方法的类关联起来 -->
+        <servlet-class>com.imooc.servlet.SampleServlet</servlet-class>
+  </servlet>
+  
+  <!-- 将servlet和URL关联起来 -->
+  <servlet-mapping>
+        <servlet-name>sample</servlet-name>
+        <url-pattern>/sample</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 再声明一个servlet -->
+  <servlet>
+        <!-- 给servlet取一个别名,可以自己取 -->
+        <servlet-name>requestMethod</servlet-name>
+        <!-- 将这个servlet与 实现service方法的类关联起来 -->
+        <servlet-class>com.imooc.servlet.RequestMethodServlet</servlet-class>
+  </servlet>
+  
+  <!-- 将servlet和URL关联起来 -->
+  <servlet-mapping>
+        <servlet-name>requestMethod</servlet-name>
+        <url-pattern>/request_method</url-pattern>
+  </servlet-mapping>
+  
+</web-app>

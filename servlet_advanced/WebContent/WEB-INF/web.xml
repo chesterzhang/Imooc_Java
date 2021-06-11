@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <display-name>servlet_advanced</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  
+  <servlet>
+        <servlet-name>patternServlet</servlet-name>
+        <servlet-class>com.imooc.servlet.pattern.PatternServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping>
+        <servlet-name>patternServlet</servlet-name>
+        <!-- 所有以/pattern/打头的url地址, 都会由PatternServlet处理 -->
+        <url-pattern>/pattern/*</url-pattern>
+  </servlet-mapping>
+  
+  <!-- 设置全局参数 -->
+  <context-param>
+        <param-name>copyright</param-name>
+        <param-value>@2021 imoo.com 京ICP备 12003892-11号</param-value>
+  </context-param>
+  
+  <context-param>
+        <param-name>title</param-name>
+        <param-value>慕课网-程序员的梦工厂</param-value>
+  </context-param>
+  
+  <error-page>
+        <error-code>404</error-code>
+        <location>/error/404.html</location>
+  </error-page>
+  
+  <error-page>
+        <error-code>500</error-code>
+        <location>/error/500.jsp</location>
+  </error-page>
+  
+</web-app>
